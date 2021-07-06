@@ -1,0 +1,71 @@
+<ul style="background-color: #dc1126">
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'index',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Admin Home">Home</a></li>
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'reparti',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione Reparti">Reparti</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'staff',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione Staff">Staff</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'utenti',
+                                        ), 
+                        'default'
+                    ); 
+                 ?>"
+		title="Gestione Utenti">Utenti</a></li>
+                <li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'prestazioni',
+                                        ), 
+                        'default'
+                    ); 
+                 ?>"
+		title="Gestione Prestazioni">Prestazioni</a></li>
+                <li><a href=" <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'faq',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione Faq">FAQ</a></li>
+                 <li><a href=" <?= $this->url(array(
+                        'controller' => 'admin',
+                        'action'     => 'statistiche',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Analisi statistiche">Statistiche</a></li>
+               <form>
+                        <input type="search" class="searchbaradmin" placeholder="Cerca nel sito.." size="30">
+
+                             <button class="searchbuttonadmin" type="submit" style="display:inline;" >
+                                 <i class="fa fa-search"></i>
+                             </button>
+                    </form> 
+</ul>

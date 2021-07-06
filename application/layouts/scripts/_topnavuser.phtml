@@ -1,0 +1,43 @@
+<ul style="background-color: #ff9900">
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'user',
+                        'action'     => 'index',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="User Home">Home</a></li>
+
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'user',
+                        'action'     => 'profilo',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione profilo personale">Profilo Personale</a></li>
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'user',
+                        'action'     => 'storicopresta',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Visualizzazione del proprio storico">Prenotazioni</a></li>
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'user',
+                        'action'     => 'messaggi',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione Messaggi">Messaggi</a></li>
+
+                <form>
+                        <input type="search" class="searchbaruser" placeholder="Cerca nel sito.." size="30">
+
+                             <button class="searchbuttonuser" type="submit" style="display:inline;" >
+                                 <i class="fa fa-search"></i>
+                             </button>
+                    </form> 
+</ul>

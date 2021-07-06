@@ -1,0 +1,63 @@
+<ul>
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'public',
+                        'action' => 'index'),                        
+                        'default',true
+                    ); 
+                 ?>"
+		title="Home">HOME</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'public',
+                        'action'     => 'viewstatic',
+                        'staticPage' => 'who'), 
+                        'default',true
+                    ); 
+                 ?>"
+		title="Il nostro profilo aziendale">CHI SIAMO</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'public',
+                        'action' => 'services'), 
+                        'default',true
+                    ); 
+                 ?>"
+		title="Servizi">SERVIZI</a></li>
+                <li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'public',
+                        'action'     => 'viewstatic',
+                        'staticPage' => 'where'), 
+                        'default',true
+                    ); 
+                 ?>"
+		title="Dottori">DOVE SIAMO</a></li>
+	
+           <form  action="<?= $this->url(array(
+                            'controller' => 'public',
+                            'action'     => 'cercaprestazioni',
+                        ),
+                            'default',true
+                        );
+                        ?>" method="post">
+                
+                        <input  type="text" class="searchbar" placeholder="Cerca una prestazione nel sito.." size="30"/>
+ 
+                    </form> 
+                <form  action="<?= $this->url(array(
+                            'controller' => 'public',
+                            'action'     => 'cercareparti',
+                        ),
+                            'default',true
+                        );
+                        ?>" method="post">
+                
+                        <input  type="text" class="searchbar" placeholder="Cerca un reparto  nel sito.." size="30"/>
+ 
+                    </form> 
+               
+</ul>
+  

@@ -1,0 +1,98 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+	<?= $this->headMeta(); ?>
+    <?= $this->headLink(); ?>
+    <?= $this->headTitle(); ?>
+    <?= $this->headScript(); ?>
+</head>
+<body id="contenitore">
+    <div id="header"> 
+         <div class="header_topuser"> 
+                <ul>            
+                    <li style="background-color: #ff9900"><a href="
+                <?= $this->url(array(
+                        'controller' => 'public',
+                        'action'     => 'login',
+                ), 
+                        'default',true
+                    ); 
+                 ?>"
+		title="LOGIN">LOGOUT</a></li>
+                   
+                </ul> 
+         </div> 
+               <div class="header_top2user"> 
+                <ul>            
+                    <li><a style="text-decoration:none;" href="url"></a>grp53@tweb.univpm.it</li>
+                    <li><a href="#"></a>+391234567890</li>
+                    </ul> 
+                </div> 
+            </div> 
+    <!-- end #header -->
+<div id="wrapper">
+	<div id="menuOruser">
+        <?= $this->render('_topnavuser.phtml') ?>
+	</div>
+
+	<!-- end #menu -->
+	<div id="page">
+  	  <div id="page-bgtop">
+    	<div id="page-bgbtm">
+	  	  <?php echo $this->layout()->content; ?>
+      	<div style="clear: both;">&nbsp;</div>
+	    </div>
+  	  </div>
+	</div>
+
+	<!-- end #content -->
+	<div id="footer">
+                <div class="box0">
+                    <div class="box0_img">
+                        
+                    </div>
+                     <div class="box0_text">
+                        Copyright © 2018 Gruppo 53.<br> All rights reserved.
+                    </div>
+                </div>
+                <div class="box1">
+                   <div class="mappafooter" style="text-align: center">
+                       <iframe width="300" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=Via+Brecce+Bianche,+12,+Ancona&amp;aq=0&amp;sll=41.442726,12.392578&amp;sspn=23.377375,53.657227&amp;ie=UTF8&amp;hq=&amp;hnear=Via+Brecce+Bianche,+12,+60131+Ancona,+Marche&amp;z=14&amp;ll=43.581248,13.515684&amp;output=embed"></iframe><br/><small><a href="http://maps.google.it/maps?f=q&amp;source=embed&amp;hl=it&amp;geocode=&amp;q=Via+Brecce+Bianche,+12,+Ancona&amp;aq=0&amp;sll=41.442726,12.392578&amp;sspn=23.377375,53.657227&amp;ie=UTF8&amp;hq=&amp;hnear=Via+Brecce+Bianche,+12,+60131+Ancona,+Marche&amp;z=14&amp;ll=43.581248,13.515684" style="font-family:sans-serif;color:white;text-align:left">Visualizzazione ingrandita della mappa</a></small>                           
+                           </div>
+                   </div> 
+                    
+                <div class="box2">
+                   <table class="tabellaorari"
+                          cellspacing="15"
+                          cellpadding="1" style="text-align: center" >
+                                     
+                        <tr>
+                          <th width="auto" colspan="2">Orari di apertura</th>
+                        </tr> 
+                            <td>Luned&iacute;</td>     
+                            <td>08:00-20.00</td>  
+                        <tr>
+                            <td>Marted&iacute;</td>    
+                            <td>08:00-20.00</td>
+                        </tr>
+                        <tr>
+                            <td>Mercoled&iacute;</td>   
+                            <td>08:00-20.00</td>
+                        </tr>
+                        <tr>
+                            <td>Gioved&iacute;</td>   
+                            <td>08:00-20.00</td>
+                        </tr>
+                        <tr>
+                            <td>Venerd&iacute;</td>   
+                            <td>08:00-20:00</td>
+                        </tr>
+                      </table>
+                </div>
+            </div> 
+	<!-- end #footer -->
+</div>
+    
+
+</body>
+</html>

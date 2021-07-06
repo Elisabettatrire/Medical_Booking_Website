@@ -1,0 +1,47 @@
+<ul style="background-color: #00b2ff">
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'staff',
+                        'action'     => 'index',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Staff Home">Home</a></li>
+	<li><a href=" <?= $this->url(array(
+                        'controller' => 'staff',
+                        'action'     => 'storico',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione prestazioni erogate">Storico prestazioni</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'staff',
+                        'action'     => 'agenda',
+                        ), 
+                        'default', true
+                    ); 
+                 ?>"
+		title="Gestione prestazioni da erogare">Agenda prestazioni</a></li>
+	<li><a
+		href="
+                <?= $this->url(array(
+                        'controller' => 'staff',
+                        'action'     => 'messaggi',
+                                        ), 
+                        'default'
+                    ); 
+                 ?>"
+		title="Gestione messaggi">Messaggi</a></li>
+               
+         
+               <form>
+                        <input type="search" class="searchbarstaff" placeholder="Cerca nel sito.." size="30">
+
+                             <button class="searchbuttonstaff" type="submit" style="display:inline;" >
+                                 <i class="fa fa-search"></i>
+                             </button>
+                    </form> 
+</ul>
