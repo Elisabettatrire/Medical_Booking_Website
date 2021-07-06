@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/doctors.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/models/Acl.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/cerca.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/index.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/help.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/login.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/prestazioni.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/admin/insertnewprestazione.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/logreg.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/library/Zend/Controller/Action/Helper/ContextSwitch.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/layouts/scripts/main.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/controllers/AdminController.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/admin/analisireparto.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/forms/Public/User.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/admin/faq.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/library/Zend/Application/Bootstrap/Bootstrap.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/registra.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/library/Zend/View/Helper/Url.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/admin/modificacancellarep.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/library/Zend/Controller/Action.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/controllers/PublicController.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/where.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/Bootstrap.php</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/views/scripts/public/registrazione.phtml</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/configs/application.ini</file>
+            <file>file:/Applications/MAMP/htdocs/Ospedaleprova_602-1/application/layouts/scripts/_topnavmain.phtml</file>
+        </group>
+    </open-files>
+</project-private>
