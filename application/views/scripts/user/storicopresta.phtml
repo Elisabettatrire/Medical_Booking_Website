@@ -1,0 +1,50 @@
+<div id="contentuser">
+    <div class="contentuser2">
+                <div class="textToCenter">
+                <h1>STORICO DELLE PRESTAZIONI PRENOTATE</h1>
+                <p>Ecco la lista completa delle tue prenotazioni relativa alle prestazioni erogate dalla nostra struttura, <br> clicca sul pulsante
+                 ANNULLA per annullare una prestazione. Altrimenti clicca su PRENOTA per prenotarne una nuova.</p></div>
+        </div>
+     <div class="tabuserstorico">
+                        <table id='tabellauser'>
+                            <tr><th>idPrenotazione</th><th>Reparto</th><th>Descrizione</th><th>Orario</th><th>Giorno</th><th>Data Prestazione</th><th>Prescrizioni</th><th>Prestazione</th><th>Annulla Prenotazione</th></tr>
+                             <?php
+                                foreach ($this->storicopresta as $storico){
+                                    
+                                echo '<tr style="height:50px; text-align:center ; font-family: sans-serif">'
+                                        . '<td>' . $storico->idprenotazione . '</td>'
+                                       // . '<td style="width:500px">' . $storico->idreparto . '</td>'
+                                        . '<td style="width:300px">' . $storico->nomereparto . '</td>'
+                                        . '<td style="width:500px">' . $storico->descrizione . '</td>'
+                                        . '<td style="width:500px">' . $storico->orario . '</td>'
+                                        . '<td style="width:500px">' . $storico->giorno . '</td>'
+                                        . '<td style="width:500px">' . $storico->data . '</td>'
+                                        . '<td style="width:500px">' . $storico->prescrizioni . '</td>'
+                                        . '<td style="width:500px, margin-bottom:10px">' . $storico->tipoprestazione . '</td>'.' <td  class="cart_delete">
+                                        <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #ff9900; " 
+                    class="" href="'.$this->url(array(
+				'controller' => 'user',
+				'action'     => 'cancellapresta',
+				'idprenotazione' => $storico->idprenotazione
+			),
+				'default',true
+			).'">Annulla</a></p>
+                </td></tr>'; }?>
+
+                         </table>
+                    </div>
+    <div id="contentbutton"><form>                      
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'user',
+                        'action' => 'prenotazione'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Prenota" class="storicoButton">
+                </form></div>
+                
+    
+</div>
+   

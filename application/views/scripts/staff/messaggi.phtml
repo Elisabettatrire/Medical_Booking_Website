@@ -1,0 +1,60 @@
+<div id="mex_page">
+<div id="contentstaff">
+    <div class="contentstaff2">
+                <div class="textToCenter">
+                <h1>GESTIONE MESSAGGI</h1>
+                <p>In questa pagina puoi consultare l'elenco degli utenti registrati al sito e i messaggi inviati e ricevuti.</p></div>
+        <br>
+        <center>   <p id='desc-mex'>Elenco utenti registrati (Users)</p></center>
+         
+        <div class="tabstaff">      
+        <table id='tabellastaff' >
+        <tr><th>ID</th><th>Username</th><th>Email</th><th>Nome</th><th>Cognome</th><th>Sesso</th><th>Numero</th>
+        <?php
+        
+        //"user" è solo l'utente registrato al sito
+            foreach ($this->utenti as $user){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $user->id . '</a></td>'
+                    . '<td>' . $user->username . '</td>'
+                   
+                     . '<td>' . $user->email . '</td>'
+                   
+                    . '<td>' . $user->nome . '</td>'
+                    . '<td>' . $user->cognome . '</td>'
+                     . '<td>' . $user->sesso . '</td>'
+                      . '<td>' . $user->telefono . '</td></tr>';
+                    
+        }?>
+            </table>
+        </div> 
+      <br>
+         <center>   <p id='desc-mex'>Elenco messaggi </p></center>
+         
+         <div class="tabstaff">
+        <table id='tabellastaff'>
+            <tr><th>ID</th><th>Mittente</th><th>Destinatario</th><th>Messaggio</th><th>Data ricevuto</th><th>Orario</th></tr>
+             <?php
+                foreach ($this->messaggi as $mex){
+                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $mex->idmex . '</td>'
+                        . '<td>' . $mex->mittente . '</td>'
+                        . '<td>' . $mex->destinatario . '</td>'
+                        .'<td>' . $mex->messaggio . '</td>'
+                        .'<td>' .$mex->data . '</td>'
+                        .'<td>' . $mex->orario . '</td></tr>';
+
+              }?>
+
+         </table>
+         </div>
+        <div id="contentbutton">                    
+            <form>  
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'staff',
+                        'action' => 'scrivimessaggio'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Scrivi nuovo messaggio" class="insertstaffButton">
+                </form></div>
+        </div>
+    </div>
+    </div>

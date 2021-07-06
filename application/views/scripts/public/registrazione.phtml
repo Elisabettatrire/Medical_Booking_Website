@@ -1,0 +1,44 @@
+
+<?php $this->headScript()
+    ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    ->appendFile($this->baseUrl('js/functions.js'))
+    ->captureStart() ?>
+// codice jQuery inserito da view-script nella sezione head della pagina
+$(function()
+{
+var actionUrl='<?php echo $this->url(array('controller' => 'public', 'action' => 'validateuser',), 'default'); ?>';
+var formName='<?php echo $this->userForm->getName() ?>';
+$(":input").on('blur', function(event) {
+var formElementId = $(this).attr('id');
+doValidation(formElementId, actionUrl, formName);
+});
+});
+<?php $this->headScript()->captureEnd() ?>
+<div class="staticregistra" id="registra">
+
+    <br><center><h1>REGISTRAZIONE</h1><br>
+  
+  <p id="desc_reg">Inserisci le informazioni richieste per registrarti al nostro sito.
+      Avrai accesso a tante funzionalità riservate agli utenti registrati 
+      come la prenotazione e modifica delle prestazioni e la comunicazione con il nostro staff.
+  </p>
+        <p id="desc_reg2">*I campi contrassegnati con un asterisco sono obbligatori.
+  </p>
+  
+  <table id='corniceform'>  
+      
+        <tr><td>
+                
+                <div class="regform" >
+                <?php echo $this->userForm; ?>
+            </div>
+                
+        </td></tr>
+        
+  </table >
+  
+  <br> 
+        </center>
+   
+    
+</div>

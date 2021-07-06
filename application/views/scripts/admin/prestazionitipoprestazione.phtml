@@ -1,0 +1,35 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>ANALISI STATISTICHE</h1>
+                <p>Scegli per quale prestazione controllare le relative prestazioni erogate <br> e clicca sul pulsante ANALISI STATISTICHE per avere maggiori dettagli.</p></div>
+        </div>
+     <div class="tabfaq">      
+        <table id='tabellaFaq' >
+        <tr><th>ID</th><th>Prestaione</th><th>Maggiori Dettagli</th>
+        <?php
+        
+        //"user" è solo l'utente registrato al sito
+            foreach ($this->prestazionitipoprestazione as $tipo){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $tipo->id . '</a></td>'
+//                    . '<td>' . $tipo->idreparto . '</td>'
+                    . '<td>' . $tipo->tipoprestazione . '</td>'.' <td  class="cart_delete">
+                                        <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #dc1126; " 
+                    class="" href="'.$this->url(array(
+				'controller' => 'admin',
+				'action'     => 'analisitipoprestazione',
+				'id' => $tipo->id
+			),
+				'default',true
+			).'">Analisi Statistiche</a></p>
+                    </td></tr>'; }?>
+            </table>
+                    </div>
+   
+                
+    
+</div>
+   

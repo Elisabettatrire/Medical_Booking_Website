@@ -1,0 +1,43 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>GESTIONE PRESTAZIONI</h1>
+                <p>Ecco la lista relativa alle prestazioni, clicca sul pulsante Modifica/Cancella per modificare o cancellare una prestazione.
+                    <br>Altrimenti clicca sul pulsante Inserisci per inserirne una nuova.</p></div>
+                  
+         <div class="tabfaq">
+        <table id='tabellaFaq'>
+            <tr><th>ID</th><th>ID reparto</th><th>Descrizione</th><th>Orario</th><th>Giorno</th><th>Prescrizioni</th><th>Tipo di prestazione</th><th>Numero di appuntamenti</th></tr>
+             <?php
+                foreach ($this->prestazioni as $prestazioni){
+                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $prestazioni->id . '</td>'
+                        . '<td>' . $prestazioni->idreparto . '</td>'
+                        . '<td>' . $prestazioni->descrizione . '</td>'
+                        .'<td>' . $prestazioni->orario . '</td>'
+                        .'<td>' . $prestazioni->giorno .'</td>'
+                        .'<td>' .$prestazioni->prescrizioni . '</td>'
+                        .'<td>' . $prestazioni->tipoprestazione . '</td>'
+                          .'<td>' .$prestazioni->numapp . '</td>'
+                        . '</tr>';
+
+              }?>
+
+         </table>
+         </div>
+        <div id="contentbutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'modificacancellapresta'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Modifica/Cancella" class="insertButton">   
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'insertnewprestazione'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Inserisci" class="insertButton">
+                </form></div>
+    </div>
+</div>

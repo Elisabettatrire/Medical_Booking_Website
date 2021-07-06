@@ -1,0 +1,49 @@
+<div id="contentadmin">
+<h3>Modifica/Cancella Utente</h3>
+<p>Utilizza questa form per modificare e/o eliminare un utente</p>
+
+ <div class="tabfaq">      
+        <table id='tabellaFaq' >
+            <tr><th>ID</th><th>Username</th><th>Password</th><th>Email</th><th>Ruolo</th><th>Nome</th><th>Cognome</th><th>Sesso</th><th>Numero</th><th></th></tr>
+        <?php
+            foreach ($this->modificacancellautente as $user){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $user->id . '</a></td>'
+                    . '<td>' . $user->username . '</td>'
+                    . '<td>' . $user->password . '</td>'
+                     . '<td>' . $user->email . '</td>'
+                    . '<td>' . $user->ruolo . '</td>'
+                    . '<td>' . $user->nome . '</td>'
+                    . '<td>' . $user->cognome . '</td>'
+                     . '<td>' . $user->sesso . '</td>'
+                      . '<td>' . $user->telefono . '</td> ' .' <td  class="cart_delete">
+                    <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #dc1126; 
+                    "class="" href="'.$this->url(array(
+                                           'controller' => 'admin',
+                                           'action' => 'updateutente',
+                                           'id'=> $user->id
+                    ),
+                                           'default',true
+                                                
+                                        ).'">Modifica</a></p>
+                    <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #dc1126; " 
+                    class="" href="'.$this->url(array(
+				'controller' => 'admin',
+				'action'     => 'cancellautente',
+				'id' => $user->id
+			),
+				'default',true
+			).'">Cancella</a></p>
+                </td></tr>';
+        }?>
+    </table>
+</div>
+<br>
+<button class="insertButton " name="Indietro" onclick="location.href='utenti'">Torna indietro
+</button>
+</div>

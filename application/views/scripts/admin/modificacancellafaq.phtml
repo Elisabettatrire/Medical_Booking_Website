@@ -1,0 +1,45 @@
+<div id="contentadmin">
+<h3>Modifica/Cancella FAQ</h3>
+<p>Utilizza questa form per modificare e/o eliminare una FAQ</p>
+ <div class="tabfaq">
+                        <table id='tabellaFaq'>
+                            <tr><th>ID</th><th>Domanda</th><th>Risposta</th><th></th></tr>
+                             <?php
+                            
+                                foreach ($this->modificacancellafaq as $domanda){
+                                echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $domanda->id . '</td>'
+                                        . '<td style="width:500px">' . $domanda->domanda . '</td>'
+                                        . '<td style="width:500px, margin-bottom:10px">' . $domanda->risposta . '</td>'
+                                        . '  <td  class="cart_delete">
+                                        <p><a style="color: white; padding-left: 15px;
+                                        padding-right: 15px; padding-top: 5px; padding-bottom: 5px;
+                                        font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                                        text-decoration:none; background-color: #dc1126; 
+                                        " class="" href="'.$this->url(array(
+                                           'controller' => 'admin',
+                                           'action' => 'updatefaq',
+                                           'id'=> $domanda->id
+                                        ),
+                                           'default',true
+                                                
+                                        ).'">Modifica</a></p>
+                                        <p><a style="color: white; padding-left: 15px; 
+                                        padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                                        font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                                        text-decoration:none; background-color: #dc1126; 
+                                        " class="" href="'.$this->url(array(
+				'controller' => 'admin',
+				'action'     => 'cancellafaq',
+				'id' => $domanda->id
+			      ),
+				'default',true
+			      ).'">Cancella</a></p>
+                </td></tr>';
+                              }?>
+
+                         </table>
+                    </div>
+<br>
+<button class="insertButton " name="Indietro" onclick="location.href='faq'">Torna indietro
+</button>
+</div>

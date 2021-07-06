@@ -1,0 +1,39 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="staticpresta">
+  <br><center><h1>CATALOGO PRESTAZIONI</h1></center>
+  <center> <p style="color:black"> Qui puoi trovare le nostre prestazioni in breve, clicca su ogni scheda per avere maggiori
+      dettagli </p></center>
+  <br>
+
+<div class="contenutoservices">
+  
+    <?php foreach($this->prestazioni as $prest) { 
+   echo '<div id="cc"><div class="card">
+  <div class="container">
+    <p><b>'.$prest->tipoprestazione.'</b></p> 
+    <h2 style="font-size:20px">'.$prest->descrizione.' </h2> 
+            
+                    <div id="contentservbutton">                   
+                    <form action='. $this->url(array(
+                    'controller' => 'public',
+                  'id' => $prest->id,
+                    'action' => 'dettagli'
+                        ),
+                    'default', true
+                     ).';
+                    " method="post">  <input type="submit" name="id" value="Vedi dettagli" class="servicesButton"> </form>
+                 </div> 
+  </div>
+</div></div>';
+}?>
+   </div>
+
+
+
+
+  <br> <br> 
+  <button class="serviceButton " id="prestaButton" name="Indietro" onclick="location.href='services'">Torna indietro
+</button>
+   <br> <br> 
+</div>

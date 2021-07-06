@@ -1,0 +1,37 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>GESTIONE FAQ</h1>
+                <p>Ecco la lista delle domande più frequenti, clicca sul pulsante Modifica/Cancella per modificare o cancellare una domanda.
+                  <br>Altrimenti clicca sul pulsante Inserisci per inserirne una nuova.</p></div>
+                <div class="tabfaq">
+                        <table id='tabellaFaq'>
+                            <tr><th>ID</th><th>Domanda</th><th>Risposta</th></tr>
+                             <?php
+                                foreach ($this->faq as $domanda){
+                                echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $domanda->id . '</td>'
+                                        . '<td style="width:500px">' . $domanda->domanda . '</td>'
+                                        . '<td style="width:500px, margin-bottom:10px">' . $domanda->risposta . '</td></tr>';
+                              }?>
+
+                         </table>
+                    </div>
+    <div id="contentbutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'modificacancellafaq'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Modifica/Cancella" class="insertButton">   
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'insertnewfaq'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Inserisci" class="insertButton">
+                </form></div>
+                
+    
+</div>
+</div>

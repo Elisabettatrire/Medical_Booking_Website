@@ -1,0 +1,43 @@
+<div id="contentadmin">
+<h3>Modifica/Cancella Reparti</h3>
+<p>Utilizza questa form per modificare e/o eliminare un reparto</p>
+
+ <div class="tabfaq">
+                        <table id='tabellaFaq'>
+                            <tr><th>ID</th><th>Nome reparto</th><th>Descrizione</th><th>Recapiti</th><th></th></tr>
+                             <?php
+                                foreach ($this->modificacancellarep as $reparti){
+                                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $reparti->id . '</td>'
+                                        
+                                        . '<td >' . $reparti->nomereparto . '</td>'.
+                                        '<td>' . $reparti->descrizionereparto . '</td>'.'<td>' . $reparti->recapiti . '</td>'
+                                        . '  <td  class="cart_delete">
+                                        <p><a style="color: white; padding-left: 15px; padding-right: 15px; padding-top: 5px; 
+                                        padding-bottom: 5px;  font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                                        text-decoration:none; background-color: #dc1126; 
+                                        " class="" href="'.$this->url(array(
+                                    'controller' => 'admin',
+                                    'action'     => 'updaterep',
+                                    'id' => $reparti->id
+                                ),
+                                    'default',true
+                                ).'">Modifica</a></p>
+                                        <p><a style="color: white; padding-left: 15px; padding-right: 15px; padding-top: 5px;
+                                        padding-bottom: 5px;  font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                                        text-decoration:none; background-color: #dc1126; " class="" href="'.$this->url(array(
+				'controller' => 'admin',
+				'action'     => 'cancellarep',
+				'id' => $reparti->id
+			),
+				'default',true
+			).'">Cancella</a></p>
+                </td></tr>';
+
+                              }?>
+
+                         </table>
+                    </div>
+
+<button class="insertButton " name="Indietro" onclick="location.href='reparti'">Torna indietro
+</button>
+</div>

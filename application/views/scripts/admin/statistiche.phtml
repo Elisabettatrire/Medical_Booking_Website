@@ -1,0 +1,34 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>ANALISI STATISTICHE</h1>
+                <p>In questa pagina puoi trovare le statistiche inerenti le prestazioni erogate 
+                    da tutta la struttura.<br> Possono essere visualizzate in base al tipo di prestazione,
+                    al dipartimento a cui appartengono <br> o in base ad un utente esterno specificato.
+                </p></div>
+        <div id="contentstatistichebutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'prestazionitipoprestazione'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Prestazioni per Tipo" class="statisticheButton">   
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'prestazioniutente'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Prestazioni per Utente" class="statisticheButton">
+                  <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'prestazionireparto'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Prestazioni per Reparto" class="statisticheButton">
+                </form></div>
+        
+                  
+    
+</div>
+</div>

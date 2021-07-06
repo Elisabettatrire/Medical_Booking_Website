@@ -1,0 +1,25 @@
+
+<div id="contentstaff">
+    <div class="contentstaff2">
+                <div class="textToCenter">
+                <h1>GESTIONE AGENDA GIORNALIERA PRESTAZIONI</h1>
+                <p>In questa pagina trovi l'elenco di tutte le prestazioni offerte
+                    dalla nostra struttura.<br> Clicca su una di esse per 
+                conoscerne le prenotazioni.</p></div>
+        
+        <?php 
+       
+            foreach ($this->agenda as $pres) { 
+              echo '<div id="contentagendabutton">                   
+                    <form id="agendaform "action='. $this->url(array(
+                    'controller' => 'staff',
+                        'id' => $pres->id,
+                    'action' => 'prenotazioni'
+                        ),
+                    'default', true
+                     ).';
+                    " method="post">  <input type="submit" name="id" value="'.$pres->id.'" class="agendaButton"> </form>
+                 </div>';}?>
+        </div>
+     
+    </div>

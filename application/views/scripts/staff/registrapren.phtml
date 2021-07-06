@@ -1,0 +1,42 @@
+<script>
+function Redirect() {
+               window.location.href='http://localhost:8888/Ospedaleprova_602-1/public/index.php/staff/agenda';}
+</script>
+<div id="contentstaff">
+    <div class="contentstaff2">
+  <br><center><h1>AGENDA GIORNALIERA PRENOTAZIONI</h1></center>
+  <center> <p> Qui puoi trovare tutte le prenotazioni per la prestazione selezionata per la data scelta.
+      </p></center>
+  <br>
+  
+
+<table class="blueTable">
+<thead>
+<tr> 
+    <th colspan="5" style="text-align: center"> Prenotazioni per il giorno scelto </th>
+
+</tr>
+</thead>
+<tr><th>ID prenotazione</th><th>Orario</th><th>Prestazione</th><th>Nome</th><th>Cognome</th></tr>
+                             <?php
+                             
+  
+                                foreach ($this->registrapren as $pren){
+                                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif">'
+                                    
+                                      
+                                        . '<td >' . $pren->idprenotazione . '</td>'.
+                                        '<td>' . $pren->orario . '</td>'.
+                                        '<td>' . $pren->tipoprestazione . '</td>'.
+                                         '<td>' . $pren->nome . '</td>'
+                                        . '<td>' . $pren->cognome . '</td>'.'</tr>';
+                                
+
+                              }?>
+
+
+</table>
+  <br><button class="insertstaffButton " name="Indietro" onclick="Redirect();">Torna alla pagina delle prestazioni
+</button><br>
+  </div>
+</div>

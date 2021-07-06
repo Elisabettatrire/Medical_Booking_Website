@@ -1,0 +1,24 @@
+<?php $this->headTitle()->append('FAQ\'s');?>
+<div class="staticfaq">
+    <div class="box-innerfaq">
+        <br>
+  <br><center><h1>FAQ</h1><br></center> 
+  <center><h2>Qui troverai le risposte alle domande più frequenti</h2></center>
+<div class="tabfaqpublic">
+                        <table id='tabellaFaqpublic'>
+                            <br>
+                            <br>
+                            <tr><th>Domanda</th><th>Risposta</th></tr>
+                             <?php
+                                foreach ($this->faq as $domanda){
+                                echo '<tr style="height:50px; text-align:center ; font-family: sans-serif">'
+                                          
+                                        .'<td style="width:500px">' . $domanda->domanda . '</td>'
+                                        . '<td style="width:500px, margin-bottom:10px">' . $domanda->risposta . '</td></tr>';
+                              }?>
+
+                         </table>
+                    </div>
+
+    </div>
+</div>

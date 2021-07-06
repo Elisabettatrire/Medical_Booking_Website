@@ -1,0 +1,45 @@
+<div id="contentadmin">
+<h3>Modifica/Cancella Staff</h3>
+<p>Utilizza questa form per modificare e/o eliminare un membro dello staff</p>
+
+ <div class="tabfaq">      
+        <table id='tabellaFaq' >
+            <tr><th>ID</th><th>Username</th><th>Password</th><th>Email</th><th>Ruolo</th><th>Nome</th><th>Cognome</th><th>Sesso</th><th>Numero</th><th></th></tr>
+        <?php
+            foreach ($this->modificacancellastaff as $membrostaff){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $membrostaff->id . '</a></td>'
+                    . '<td>' . $membrostaff->username . '</td>'
+                    . '<td>' . $membrostaff->password . '</td>'
+                     . '<td>' . $membrostaff->email . '</td>'
+                    . '<td>' . $membrostaff->ruolo . '</td>'
+                    . '<td>' . $membrostaff->nome . '</td>'
+                    . '<td>' . $membrostaff->cognome . '</td>'
+                     . '<td>' . $membrostaff->sesso . '</td>'
+                      . '<td>' . $membrostaff->telefono . '</td> ' .' <td  class="cart_delete">
+                    <p><a style="color: white; padding-left: 15px; padding-right: 15px; padding-top: 5px;
+                    padding-bottom: 5px;  font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #dc1126; " 
+                    class="" href="'.$this->url(array(
+                                    'controller' => 'admin',
+                                    'action'     => 'updatestaff',
+                                    'id' => $membrostaff->id
+                                ),
+                                    'default',true
+                                ).'">Modifica</a></p>
+                    <p><a style="color: white; padding-left: 15px; padding-right: 15px; padding-top: 5px; 
+                    padding-bottom: 5px;  font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #dc1126; " class="" href="'.$this->url(array(
+				'controller' => 'admin',
+				'action'     => 'cancellastaff',
+				'id' => $membrostaff->id
+			),
+				'default',true
+			).'">Cancella</a></p>
+                </td></tr>';
+        }?>
+    </table>
+</div>
+
+<button class="insertButton " name="Indietro" onclick="location.href='staff'">Torna indietro
+</button>
+</div>

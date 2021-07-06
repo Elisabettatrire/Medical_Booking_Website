@@ -1,0 +1,54 @@
+
+<div id="contentstaff">
+    <div class="contentstaff2">
+                <div class="textToCenter">
+                <h1>GESTIONE PRENOTAZIONI DELLE PRESTAZIONI EROGATE</h1>
+                <p>Ecco la lista delle prenotazioni effettutate da tutti gli utenti per le prestazioni erogate dalla nostra struttura, <br> clicca sul pulsante
+                 ANNULLA per annullare una prenotazione, <br>altrimenti clicca sul pulsante SPOSTA per modificarne la data di erogazione.</p></div>
+        </div>
+    <div class="tabstaffstorico">
+                        <table id='tabellastaff'>
+                            <tr><th>idPrenotazione</th><th>idPrestazione</th><th>Username</th><th>Reparto</th><th>Orario</th><th>Giorno</th><th>Data Prestazione</th><th>Prestazione</th><th>Modifica Prenotazione</th></tr>
+                             <?php
+                                foreach ($this->storico as $prenotazioni){
+                                echo '<tr style="height:50px; text-align:center ; font-family: sans-serif">'
+                                        . '<td>' . $prenotazioni->idprenotazione . '</td>'
+                                        . '<td style="width:300px">' . $prenotazioni->idprestazione . '</td>'
+                                       //. '<td style="width:500px">' . $prenotazioni->idpaziente . '</td>'
+                                        . '<td style="width:300px">' . $prenotazioni->username . '</td>'
+                                        . '<td style="width:300px">' . $prenotazioni->nomereparto . '</td>'
+                                        . '<td style="width:500px">' . $prenotazioni->orario . '</td>'
+                                        . '<td style="width:500px">' . $prenotazioni->giorno . '</td>'
+                                        . '<td style="width:500px">' . $prenotazioni->data . '</td>'
+                                        //. '<td style="width:500px">' . $prenotazioni->data . '</td>'
+                                        //. '<td style="width:500px">' . $prenotazioni->prescrizioni . '</td>'
+                                        . '<td style="width:500px, margin-bottom:10px">' . $prenotazioni->tipoprestazione . '</td>'.' <td  class="cart_delete">
+                                        <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #00b2ff; " 
+                    class="" href="'.$this->url(array(
+				'controller' => 'staff',
+				'action'     => 'cancellaprenotazione',
+				'idprenotazione' => $prenotazioni->idprenotazione
+			),
+				'default',true
+			).'">Annulla</a></p>
+                            <p><a style="color: white; padding-left: 15px; 
+                    padding-right: 15px; padding-top: 5px; padding-bottom: 5px;  
+                    font-family: sans-serif;cursor: pointer;border: 1px solid white;
+                    text-decoration:none; background-color: #00b2ff; " 
+                    class="" href="'.$this->url(array(
+				'controller' => 'staff',
+				'action'     => 'updateprenotazione',
+				'idprenotazione' => $prenotazioni->idprenotazione
+			),
+				'default',true
+			).'">Sposta</a></p>
+                </td></tr>'; }?>
+
+                         </table>
+      
+                    </div>
+    
+    </div>

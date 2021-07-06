@@ -1,0 +1,42 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>GESTIONE REPARTI</h1>
+                <p>Ecco la lista relativa ai reparti della struttura, clicca sul pulsante Modifica/Cancella per modificare o cancellare un reparto.
+                    <br>Altrimenti clicca sul pulsante Inserisci per inserirne uno nuovo.</p></div>
+        
+        <div class="tabfaq">
+                        <table id='tabellaFaq'>
+                            <tr><th>ID</th><th>Nome reparto</th><th>Descrizione</th><th>Recapiti</th></tr>
+                             <?php
+                                foreach ($this->reparti as $reparti){
+                                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $reparti->id . '</td>'
+                                      
+                                        . '<td >' . $reparti->nomereparto . '</td>'.
+                                        '<td>' . $reparti->descrizionereparto . '</td>'.'<td>' . $reparti->recapiti . '</td></tr>';
+                                
+
+                              }?>
+
+                         </table>
+                    </div>
+        
+        
+        
+        <div id="contentbutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'modificacancellarep'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Modifica/Cancella" class="insertButton">   
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'insertnewreparto'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Inserisci" class="insertButton">
+                </form></div>
+    </div>
+</div>     

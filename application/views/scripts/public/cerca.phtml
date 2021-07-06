@@ -1,0 +1,24 @@
+<div class="staticpresta">
+ 
+
+                <form method="post" action="redirectorurlcerca">
+<input type="text" name="testo">
+<input type="submit" value="Cerca">
+</form>
+
+             
+              <?php  foreach ($this->prestazioni as $prest){
+                echo '<div class="tabprestapublic">
+        <table id="tabellaPrestapublic">
+            <tr><th>Giorno</th><th>Orario</th><th>Tipo di prestazione</th><th>Descrizione</th><th>Prescrizioni</th></tr>'
+                  . '<tr style="height:50px ; text-align:center ; font-family: sans-serif">'
+                        . '<td>' . $prest->giorno . '</td>'
+                        .'<td>' . $prest->orario . '</td>'
+                        .'<td>' . $prest->tipoprestazione .'</td>'
+                        .'<td>' .$prest->descrizione . '</td>'
+                        .'<td>' . $prest->prescrizioni . '</td></tr></table>';
+
+              }?>
+
+       
+         </div>

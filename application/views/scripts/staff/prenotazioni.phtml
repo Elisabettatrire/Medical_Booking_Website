@@ -1,0 +1,38 @@
+<script>
+function Redirect() {
+               window.location.href='http://localhost:8888/Ospedaleprova_602-1/public/index.php/staff/agenda';}
+</script>
+<div id="contentstaff">
+    <div class="contentstaff2">
+  <br><center><h1>AGENDA GIORNALIERA PRENOTAZIONI</h1></center>
+  <center>   <p style="font-weight: bold">     Oggi è il giorno: <?php echo date('Y-m-d'); ?>.</p>                                   
+      <p>  Utilizza la form sottostante per visualizzare tutte le prenotazioni di oggi <br>
+                o di un altro giorno a tua scelta per la prestazione selezionata. <br>
+               Torna indietro per cambiare prestazione.</p> </center>
+  
+ 
+
+  <br>
+  <fieldset class="prenotatopfieldset">
+                <legend><b>Visualizza prenotazioni</b></legend>
+                <div class="prenotaTable">
+                 <table>
+                <tr>
+                <th colspan="2" >Scrivi la data nel formato indicato e premi "Cerca".</th> 
+                    
+                  </tr>
+                  </table>
+                     
+                    </div>
+                  
+                <center>      <?php echo $this->dateForm;?> </center>
+                  
+               
+                </fieldset>
+
+  <br> <button class="insertstaffButton " name="Indietro" onclick="Redirect();">Torna indietro
+</button><br>  
+
+  
+  </div>
+</div>

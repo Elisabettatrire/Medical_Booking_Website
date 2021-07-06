@@ -1,0 +1,37 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>GESTIONE UTENTI</h1>
+                <p>Ecco la lista degli utenti registrati al sito, clicca sul pulsante Modifica/Cancella per modificare o cancellare un utente.</p></div>
+            <div class="tabfaq">      
+        <table id='tabellaFaq' >
+        <tr><th>ID</th><th>Username</th><th>Password</th><th>Email</th><th>Ruolo</th><th>Nome</th><th>Cognome</th><th>Sesso</th><th>Numero</th>
+        <?php
+        
+        //"user" è solo l'utente registrato al sito
+            foreach ($this->utenti as $user){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $user->id . '</a></td>'
+                    . '<td>' . $user->username . '</td>'
+                    . '<td>' . $user->password . '</td>'
+                     . '<td>' . $user->email . '</td>'
+                    . '<td>' . $user->ruolo . '</td>'
+                    . '<td>' . $user->nome . '</td>'
+                    . '<td>' . $user->cognome . '</td>'
+                     . '<td>' . $user->sesso . '</td>'
+                      . '<td>' . $user->telefono . '</td></tr>';
+                    
+        }?>
+            </table>
+        </div>      
+        <div id="contentbutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'modificacancellautente'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Modifica/Cancella" class="insertButton">
+                </form></div>
+    </div>
+</div>
+

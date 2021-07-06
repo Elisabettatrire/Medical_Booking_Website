@@ -1,0 +1,58 @@
+
+<div id="contentuser">
+    <div class="contentuser2">
+                <div class="textToCenter">
+                <h1>GESTIONE MESSAGGI</h1>
+                <br>
+                <p>Messaggi inviati allo staff</p></div>
+        
+         <div class="tabuser">
+        <table id='tabellauser'>
+            <tr><th>ID</th><th>Messaggio</th><th>Data ricevuto</th><th>Orario</th></tr>
+             <?php
+             
+                foreach ($this->messaggi as $mex){
+                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $mex->idmex . '</td>'
+                        
+                       
+                        .'<td>' . $mex->messaggio . '</td>'
+                        .'<td>' .$mex->data . '</td>'
+                        .'<td>' . $mex->orario . '</td></tr>';
+              }
+              ?>
+
+         </table>
+         </div>
+        <br><br>
+        <div class="textToCenter">  <p>Messaggi ricevuti dallo staff</p> </div>
+
+        <div class="tabuser">
+        <table id='tabellauser'>
+            <tr><th>ID</th><th>Messaggio</th><th>Data ricevuto</th><th>Orario</th></tr>
+             <?php
+             
+                foreach ($this->messagg as $mex2){
+                echo '<tr style="height:50px ; text-align:center ; font-family: sans-serif"><td>' . $mex2->idmex . '</td>'
+                       
+                       
+                        .'<td>' . $mex2->messaggio . '</td>'
+                        .'<td>' .$mex2->data . '</td>'
+                        .'<td>' . $mex2->orario . '</td></tr>';
+                
+
+              }
+              ?>
+
+         </table>
+         </div>
+        <div id="contentbutton">                    
+            <form>  
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'user',
+                        'action' => 'scrivimessaggio'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Scrivi nuovo messaggio" class="insertuserButton">
+                </form></div>
+        </div>
+    </div>

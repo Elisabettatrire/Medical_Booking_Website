@@ -1,0 +1,64 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ <div class="staticservices">
+    <br><center><h1>SERVIZI</h1><br></center>
+    
+<!--    <div id="servimage"></div>-->
+    
+    <p id="desc_services">In questa pagina
+        puoi consultare le informazioni relative 
+        ai reparti <br>presenti nella nostra struttura.<br>
+    </p>
+    
+    <div class="contenutoservices">
+  
+      
+<?php 
+        
+            foreach ($this->services as $dipartimenti) { 
+              echo '  <fieldset class="servicestopfieldset">'
+                . '<legend><b> <td>' . $dipartimenti->nomereparto . '</td></b></legend>
+                <div class="tabellaserv"style="font-family=: sans-serif">
+                 <table>
+                <tr>
+                    <th>Descrizione:</th>
+                 
+                          <td>' . $dipartimenti->descrizionereparto . '</td></tr>
+                <tr>
+                    <th>Recapiti:&nbsp;</th> 
+                    
+                                 <td>' .  $dipartimenti->recapiti . '</td></tr>               
+               </table>
+               
+               
+               
+                 </div> <div id="contentservbutton">                   
+                    <form action='. $this->url(array(
+                    'controller' => 'public',
+                        'id' => $dipartimenti->id,
+                    'action' => 'prestazioni'
+                        ),
+                    'default', true
+                     ).';
+                    " method="post">  <input type="submit" name="id" value="Vai alle prestazioni" class="servicesButton"> </form>
+                 </div> </fieldset> <br><br>
+                    
+                 ';}?>
+
+              
+            <br>      
+           
+                                                               
+</div>
+</div>
+
+                                                               
+   
+
+
+<!--    <img src="/Ospedaleprova_602-1/public/css/images/denttrasp_icon.png" alt="Immagine" style="width:50%"/>-->
+
+</div>
+
+

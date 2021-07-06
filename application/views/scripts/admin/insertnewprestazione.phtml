@@ -1,0 +1,24 @@
+
+<?php $this->headScript()
+    ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    ->appendFile($this->baseUrl('js/functions.js'))
+    ->captureStart() ?>
+// codice jQuery inserito da view-script nella sezione head della pagina
+$(function()
+{
+var actionUrl='<?php echo $this->url(array('controller' => 'admin', 'action' => 'validateaddpresta',), 'default'); ?>';
+var formName='<?php echo $this->prestaForm->getName() ?>';
+$(":input").on('blur', function(event) {
+var formElementId = $(this).attr('id');
+doValidation(formElementId, actionUrl, formName);
+});
+});
+<?php $this->headScript()->captureEnd() ?>
+<div id="contentadmin">
+<h3>Inserisci Prestazione</h3>
+<p>Utilizza questa form per inserire una nuova prestazione</p>
+<?php echo $this->prestaForm; ?>
+
+<button class="insertButton " name="Indietro" onclick="location.href='prestazioni'">Torna indietro
+</button>
+</div>

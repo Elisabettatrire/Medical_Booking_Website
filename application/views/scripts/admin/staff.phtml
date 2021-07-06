@@ -1,0 +1,42 @@
+<div id="contentadmin">
+    <div class="contentadmin2">
+                <div class="textToCenter">
+                <h1>GESTIONE STAFF</h1>
+                <p>Ecco la lista dei membri dello staff del sito, clicca sul pulsante Modifica/Cancella per modificare o cancellare un membro dello staff.
+                    <br>Altrimenti clicca sul pulsante Inserisci per inserirne uno nuovo.</p></div>
+        <div class="tabfaq">      
+        <table id='tabellaFaq' >
+        <tr><th>ID</th><th>Username</th><th>Password</th><th>Email</th><th>Ruolo</th><th>Nome</th><th>Cognome</th><th>Sesso</th><th>Numero</th>
+        <?php
+            foreach ($this->staff as $membrostaff){
+            echo '<tr style="height:50px; text-align:center ; font-family: sans-serif"><td>' . $membrostaff->id . '</a></td>'
+                    . '<td>' . $membrostaff->username . '</td>'
+                    . '<td>' . $membrostaff->password . '</td>'
+                     . '<td>' . $membrostaff->email . '</td>'
+                    . '<td>' . $membrostaff->ruolo . '</td>'
+                    . '<td>' . $membrostaff->nome . '</td>'
+                    . '<td>' . $membrostaff->cognome . '</td>'
+                     . '<td>' . $membrostaff->sesso . '</td>'
+                      . '<td>' . $membrostaff->telefono . '</td></tr>';
+                    
+        }?>
+    </table>
+</div>
+        
+        <div id="contentbutton">                    
+                <form action="<?= $this->url(array(
+                    'controller' => 'admin',
+                    'action' => 'modificacancellastaff'),
+                    'default', true
+                );
+                ?>" method="post">                   
+                    <input type="submit" value="Modifica/Cancella" class="insertButton">   
+                 <input formaction="<?= $this->url(array(
+                        'controller' => 'admin',
+                        'action' => 'insertnewstaff'),
+                        'default', true
+                    );
+                    ?>" type="submit" value="Inserisci" class="insertButton">
+                </form></div>
+    </div>
+</div>

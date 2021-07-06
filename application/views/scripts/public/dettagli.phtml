@@ -1,0 +1,27 @@
+<div class="staticservices">
+    <br><center><h1>DETTAGLI PRESTAZIONE </h1><br></center>
+    <p id="dett_services">In questa pagina trovi i dettagli sulla prestazione selezionata<br>
+    </p>
+         <br>
+   
+<div class="contenutoservices">
+  
+    <?php foreach($this->dettagli as $det) { 
+   echo '<div id="cd"><div class="cardd">
+  <div class="containerd">
+    <p><b>'.$det->nomereparto.'</b></p> 
+        
+    <h2 style="font-size:20px">Prestazione: '.$det->tipoprestazione.' </h2> 
+        <h2 style="font-size:20px">Descrizione: '.$det->descrizione.' </h2> 
+            <h2 style="font-size:20px">Orario di ricevimento: '.$det->orario.' </h2> 
+                <h2 style="font-size:20px">Giorno di ricevimento: '.$det->giorno.' </h2> 
+                    <h2 style="font-size:20px">Prescrizioni da osservare: '.$det->prescrizioni.' </h2> 
+                        <h2 style="font-size:20px">Numero massimo di appuntamenti: '.$det->numapp.' </h2> 
+            
+                    
+  </div>
+</div></div>';
+}?>
+   </div>
+         <br><br>
+</div>

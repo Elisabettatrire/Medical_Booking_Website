@@ -1,0 +1,75 @@
+<div id="contentuser">
+    <div class="contentuser2">
+        <div class="article">
+            <div class="textToCenter">
+            <h1>IL TUO PROFILO</h1>  </div>        
+            <br>
+            <br>
+                <fieldset class="profiletopfieldset">
+                <legend><b>Sezione 1: Dati Anagrafici </b></legend>
+                <div class="profileTable">
+                 <table>
+                <tr>
+                    <th>Nome:</th>
+                <?php foreach ($this->profilo as $utente) {   
+                           echo '<td>' . $utente->nome . '</td>'; }?></tr>
+                <tr>
+                    <th>Cognome:&nbsp;</th> 
+                     <?php foreach ($this->profilo as $utente) {   
+                                 echo  '<td>' .  $utente->cognome . '</td>'; }?></tr>               
+               </table>
+                    </div>
+                </fieldset>
+            <fieldset class="profiletopfieldset">
+                <legend><b>Sezione 1: Altri Dati </b></legend>
+                <div class="profileTable">
+                 <table>
+                <tr>
+                    <th>Sesso:</th>
+                <?php foreach ($this->profilo as $utente) {   
+                           echo '<td>' . $utente->sesso . '</td>'; }?></tr>
+                <tr>
+                    <th>Telefono:&nbsp;</th>
+                     <?php foreach ($this->profilo as $utente) {   
+                                 echo  '<td>' . $utente->telefono . '</td>'; }?></tr>               
+               </table>
+                    </div>
+                 </fieldset>
+              <fieldset class="profiletopfieldset">
+                <legend><b>Sezione 2: Email </b></legend>
+                <div class="profileTable">
+                 <table>
+                <tr>
+                    <th>Email:&nbsp;</th>
+                    <?php foreach ($this->profilo as $utente) { 
+                        echo '<td>' . $utente->email . '</td>'; }?></tr>               
+                    </table>
+                    </div>
+                 </fieldset>
+            <fieldset class="profiletopfieldset">
+                <legend><b>Sezione 3: Dati Autenticazione </b></legend>
+                <div class="profileTable">
+                 <table>
+                <tr>
+                    <th>Username:&nbsp;</th>
+                <?php foreach ($this->profilo as $utente) {   
+                           echo '<td>' . $utente->username . '</td>'; }?></tr>
+                <tr>
+                    <th>Password:&nbsp;</th>
+                     <?php foreach ($this->profilo as $utente) {   
+                                 echo  '<td>' . $utente->password . '</td>'; }?></tr>               
+               </table>
+                    </div>
+                 </fieldset> 
+            <br>
+            <a href="<?= $this->url(array(
+                'controller' => 'user',
+                'action' => 'updateprofilo',
+                'id'=> $utente->id
+                             ),
+                'default', true
+            );
+            ?>"><input class="profiloButton" type="submit" value="Modifica"></a>
+    </div>
+</div>
+    </div>

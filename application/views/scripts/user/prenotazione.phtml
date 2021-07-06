@@ -1,0 +1,58 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div id="contentuser">
+    <div class="contentuser2">
+                <div class="textToCenter">
+                <h1>PRENOTA UNA PRESTAZIONE</h1>
+                <p>Scegli il dipartimento del quale vuoi prenotare una prestazione.</p></div>
+  
+      
+<?php 
+        
+            foreach ($this->prenotazione as $p) { 
+              echo '  <fieldset class="profiletopfieldset">'
+                . '<legend><b> <td>' . $p->nomereparto . '</td></b></legend>
+                <div class="tabellaserv"style="font-family=: sans-serif">
+                 <table>
+                <tr>
+                    <th>Descrizione:</th>
+                 
+                          <td>' . $p->descrizionereparto . '</td></tr>
+                <tr>
+                    <th>Recapiti:&nbsp;</th> 
+                    
+                                 <td>' .  $p->recapiti . '</td></tr>               
+               </table>
+               
+               
+               
+                 </div> <div id="contentservbutton">                   
+                    <form action='. $this->url(array(
+                    'controller' => 'user',
+                        'id' => $p->id,
+                    'action' => 'prestazioni'
+                        ),
+                    'default', true
+                     ).';
+                    " method="post">  <input type="submit" name="id" value="Vai alle prestazioni" class="prenotaButton"> </form>
+                 </div> </fieldset> <br><br>
+                    
+                 ';}?>
+
+              
+            <br>      
+           
+                                                               
+</div>
+</div>
+
+                                                               
+   
+
+
+<!--    <img src="/Ospedaleprova_602-1/public/css/images/denttrasp_icon.png" alt="Immagine" style="width:50%"/>-->
+
+
+
+
